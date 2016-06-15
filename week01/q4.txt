@@ -1,0 +1,14 @@
+#Question 4 Write a script to copy HTML and CGI files from a project directory to a web server directory. Assume the project is in ~/my_project, with html and cgi sub-directories, with no sub-directories under those; assume a destination of ~/public_html
+
+#copy html subdirectory from project directory with files in .html. Exclude /* if you want the whole directory
+
+cp ~/my_proj/HTML/*.html ~/public_html
+
+# copy CGI just like html above
+cp ~/my_proj/CGI/*.cgi ~/public_cgi
+
+#to copy over the whole directory recursively
+cp -R ~/my_proj/HTML ~/public_html
+cp -R ~/my_proj/CGI ~/public_cgi
+
+

@@ -1,0 +1,4 @@
+#Question 1
+#Create your git repository
+#$ mkdir -p proj/week01/{bin, lib}
+

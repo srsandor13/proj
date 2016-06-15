@@ -1,0 +1,3 @@
+#Question 2
+# Finish editor tutorial and write a |P why I picked it
+#I chose VI because it is most common to me and I know how to edit/manage in it
