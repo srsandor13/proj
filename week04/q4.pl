@@ -4,16 +4,15 @@
 use strict;
 use warnings;
 
+use lib '.';
 use random_generator;
 use Test::Simple tests => 1;
 
-my $file = "./q4_testOutput";
-open( my $OUT , '>' , $file ) or die( "Can't open this $file ($!)" );
 
-sub gen;
 my $length = 50;
 my $random_length = "N";
 my $gen = random_generator($length, $random_length);
-ok( $length ($gen)>10, "Sequence generated is > than 10bp!");
+print "$gen\n";
+ok( length ($gen) > 10 , "Sequence generated is > than 10bp!");
 
 
