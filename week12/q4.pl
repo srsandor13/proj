@@ -8,6 +8,7 @@ use warnings;
 use Bio::Perl;
 
 my ($input, $format, $wrote, $file_name) = @ARGV;
+#read in sequences of format A and convert to file of format B
 
 my @bio_seq_objects = read_all_sequences( $input );
 write_sequence( ">$file_name" , $format , @bio_seq_objects );

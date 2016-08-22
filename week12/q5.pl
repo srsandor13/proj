@@ -4,8 +4,9 @@
 use strict;
 use warnings;
 use Bio::perl;
-Use Bio::Tools::run::RemoteBlast;
+Use Bio::Tools::Run::RemoteBlast;
 
+#Define search/input argument 
 my ( $input, $type, $accesion ) = @ARGV;
 my $db;
 if ($type eq 'dna') {
@@ -16,7 +17,7 @@ if ($type eq 'dna') {
 		die ("No match");
 	}
 }
-elsif ($type eq 'prtotein') {
+elsif ($type eq 'protein') {
 	if ($input eq 'blastp' or $input eq 'tblastn') {
 		$db = 'genpept';
 	}
@@ -27,9 +28,11 @@ elsif ($type eq 'prtotein') {
 else {
 	die ("Needs to be 'dna' or 'protein')";
 }
+#get the sequence of the search by accession number in the database
 my $sequence = get_sequence ($db, $accesion ):
+#define parameters
 my $factory = Bio::Tools::Run::RemoteBlast->new ( - prog => $input , - data => 'nr' ,  -expect => '1e-10' , -readmethod => 'SearchIO' );
-
+#Get blast and output to a file
 my $factory->submit_blast($sequence);
 while (my @rids = $factory->new_rid) {
 	foreach my $rid (@rids ) {

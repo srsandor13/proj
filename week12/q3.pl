@@ -10,7 +10,7 @@ has length => ( is => 'ro'; );
 
 #subroutine that defines random proten sequences
 sub random_protein_sequences{
-
+	#define fixed or random length of protein
         my ( @args ) = ( @_ );
         my $size = $args[0]->length;
         if ( scalar(@args) > 1 ) {
@@ -19,7 +19,7 @@ sub random_protein_sequences{
                         $size = int( rand $size ) + 1;
                 }
         }
-
+	#generate the protein of fixed or random length for user
         my @aa = ( 'A' , 'C' , 'D' , 'E' , 'F' , 'G' , 'H' , 'I' , 'K' , 'L' , 'M' , 'N' , 'P' , 'Q' , 'R' , 'S' , 'T' , 'V' , 'W' , 'Y' );
         my $i = 0;
         my $protein = '';

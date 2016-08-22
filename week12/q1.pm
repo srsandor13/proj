@@ -6,14 +6,6 @@ use warnings;
 
 # non-OOP perl function called random_protein that generates a random protein sequence of a fixed or random length
 
-=pod
-
-=head1 randomPROTEIN
-
-randomPROTEIN function; arg[1] defines length of sequence (fixed or random) returned to user while arg[2] is random
-
-=cut
-
 #define length with use of subroutine
 use Exporter 'import';
 our @EXPORT_OK = ( "random_protein" );
