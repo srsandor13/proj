@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #Quesiton 6: Use BioPerl modules to write script that inputs a protein sequence accession # and fetches the Genbank blasts it and retrieves all hits above a specified e-value. Save each return to its own file; if not hits then prompt user.
-
+#see remoteblast_demo.pl for other ways to parse and submit files this way. 
 use warnings;
 use strict;
 use Bio::Perl,
